@@ -1,0 +1,115 @@
+{
+  "title": "UI Anti-Patterns",
+  "description": "Common mistakes in enterprise applications and how to avoid them",
+  "antiPatterns": [
+    {
+      "title": " burying Important Actions",
+      "problem": "Primary actions hidden in menus or below the fold",
+      "impact": "Users miss critical functions, increased support tickets",
+      "solutions": [
+        "Place primary actions in prominent positions (top-right, above fold)",
+        "Use buttons, not icons alone for important actions",
+        "If action must be in menu, consider if it should be surfaced instead"
+      ]
+    },
+    {
+      "title": "Unlabeled Icon Buttons",
+      "problem": "Icons without text labels or tooltips",
+      "impact": "Confusion, onboarding friction, accessibility issues",
+      "solutions": [
+        "Add text labels to icon buttons when space allows",
+        "Ensure tooltips appear on hover with clear labels",
+        "Use recognizable iconography from the icon library",
+        "When in doubt, prefer text over icons for actions"
+      ]
+    },
+    {
+      "title": "Deep Navigation Hierarchies",
+      "problem": "Users need 4+ clicks to reach common content",
+      "impact": "Frustration, abandonment, support calls",
+      "solutions": [
+        "Flatten navigation where possible",
+        "Use dashboard as launchpad for recent items",
+        "Implement search for quick access",
+        "Consider recently viewed/saved items shortcuts"
+      ]
+    },
+    {
+      "title": "Form Validation on Submit Only",
+      "problem": "Users only see errors after attempting to submit",
+      "impact": "Rework, frustration, abandoned forms",
+      "solutions": [
+        "Validate on blur for real-time feedback",
+        "Show error summary at top AND inline with fields",
+        "Use inline validation with clear, actionable messages",
+        "Disable submit until form is valid (or allow submit with warnings)"
+      ]
+    },
+    {
+      "title": "Modal Overload",
+      "problem": "Too many modals, or modals for complex tasks",
+      "impact": "Lost context, trapped users, broken workflows",
+      "solutions": [
+        "Use modals for quick tasks only (1-3 fields)",
+        "For complex forms, use full pages or drawers",
+        "Avoid modal chains (modal opening modal)",
+        "Provide clear cancel/escape routes"
+      ]
+    },
+    {
+      "title": "Ignoring Empty States",
+      "problem": "No feedback when lists/tables have no data",
+      "impact": "Confusion,以为是错误, support inquiries",
+      "solutions": [
+        "Show helpful empty states with explanation",
+        "Provide action to add first item",
+        "Distinguish between 'no data' and 'loading' states",
+        "Use illustrations sparingly and purposefully"
+      ]
+    },
+    {
+      "title": "Inconsistent Error Messages",
+      "problem": "Different error formats across the application",
+      "impact": "Confusion, reduced trust, support burden",
+      "solutions": [
+        "Create standardized error message templates",
+        "Use icons + text + color consistently",
+        "Include actionable guidance ('Try again', 'Contact support')",
+        "Log errors for debugging while showing user-friendly message"
+      ]
+    },
+    {
+      "title": "Dashboard Clutter",
+      "problem": "Too many metrics, charts, and widgets competing for attention",
+      "impact": "Analysis paralysis, missed important data",
+      "solutions": [
+        "Prioritize - only 3-5 key metrics on primary dashboard",
+        "Allow dashboard customization for user roles",
+        "Group related metrics together",
+        "Use progressive disclosure for detailed data"
+      ]
+    },
+    {
+      "title": "Infinite Scroll Without Pagination",
+      "problem": "Scrolling forever with no way to jump to specific items",
+      "impact": "Hard to find items, performance issues, no 'load more' option",
+      "solutions": [
+        "Use pagination for data tables (even if infinite scroll elsewhere)",
+        "Provide search/filter for large datasets",
+        "Show total count when available",
+        "Consider virtual scrolling for very large lists"
+      ]
+    },
+    {
+      "title": "Lost in Space (No Breadcrumbs)",
+      "problem": "Users can't navigate back or understand their location",
+      "impact": "Disorientation, frustration, support calls",
+      "solutions": [
+        "Always show breadcrumbs in hierarchical applications",
+        "Make breadcrumb items clickable",
+        "Include current location in page title",
+        "Provide 'home' or dashboard link"
+      ]
+    }
+  ]
+}

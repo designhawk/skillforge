@@ -1,0 +1,103 @@
+{
+  "title": "Enterprise Color Usage",
+  "description": "Color guidance for professional enterprise applications",
+  "principles": [
+    {
+      "title": "Use Color Purposefully",
+      "description": "Color should communicate meaning, not decoration",
+      "rules": [
+        "Status colors must be consistent across the app",
+        "Color alone shouldn't convey critical information (add icons/text)",
+        "Avoid color as the only differentiator for accessibility"
+      ]
+    },
+    {
+      "title": "Maintain Professional Palette",
+      "description": "Enterprise apps should feel trustworthy and focused",
+      "rules": [
+        "Limit primary color to 1-2 brand colors",
+        "Use neutral grays for text and backgrounds",
+        "Reserve saturated colors for status and CTAs only"
+      ]
+    },
+    {
+      "title": "Ensure Contrast",
+      "description": "Text must be readable in all conditions",
+      "rules": [
+        "Body text: minimum 4.5:1 contrast ratio (WCAG AA)",
+        "Large text: minimum 3:1 contrast ratio",
+        "Interactive elements: minimum 3:1 against background"
+      ]
+    }
+  ],
+  "statusColors": {
+    "success": {
+      "color": "green-500",
+      "meaning": "Completed, approved, active, available",
+      "usage": "Success messages, active status, completed tasks"
+    },
+    "warning": {
+      "color": "orange-500",
+      "meaning": "Pending, attention needed, expiring soon",
+      "usage": "Warning messages, pending status, near-expiry alerts"
+    },
+    "error": {
+      "color": "red-500",
+      "meaning": "Failed, rejected, blocked, critical",
+      "usage": "Error messages, failed status, destructive actions"
+    },
+    "info": {
+      "color": "ocean-500",
+      "meaning": "Informational, neutral, in-progress",
+      "usage": "Info messages, in-progress status, links"
+    },
+    "disabled": {
+      "color": "engineering-300",
+      "meaning": "Unavailable, inactive, not applicable",
+      "usage": "Disabled buttons, inactive items, unavailable features"
+    }
+  },
+  "guidance": {
+    "backgrounds": {
+      "page": "engineering-100 or white",
+      "card": "white (on engineering-100 background)",
+      "sidebar": "engineering-600 or white",
+      "header": "white or engineering-50"
+    },
+    "text": {
+      "primary": "base-black (for maximum readability)",
+      "secondary": "engineering-500",
+      "disabled": "engineering-300",
+      "onDark": "white or engineering-100"
+    },
+    "borders": {
+      "default": "engineering-200",
+      "focus": "ocean-500",
+      "error": "red-500"
+    },
+    "dataVisualization": [
+      "ocean-500 (primary data)",
+      "green-500 (positive/success)",
+      "orange-500 (warning/neutral)",
+      "red-500 (negative/alert)",
+      "berry-500 (accent)",
+      "lawn-500 (secondary data)"
+    ],
+    "avoid": [
+      "Pure black (#000) for text - use base-black (#1D1D1D)",
+      "Pure white (#FFF) for large backgrounds - use engineering-100",
+      "Multiple saturated colors in close proximity",
+      "Color gradients in data-heavy interfaces",
+      "Color alone to indicate status"
+    ]
+  },
+  "darkMode": {
+    "note": "If supporting dark mode in enterprise app:",
+    "considerations": [
+      "Use semantic colors (success-color vs green-500)",
+      "Test all status colors in both modes",
+      "Maintain contrast ratios in dark mode",
+      "Consider system preference detection"
+    ]
+  }
+}

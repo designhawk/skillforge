@@ -1,0 +1,139 @@
+{
+  "title": "Accessibility Best Practices",
+  "description": "Creating accessible enterprise applications",
+  "standards": {
+    "wcag": "WCAG 2.1 AA compliance required",
+    "aria": "Use ARIA correctly to enhance, not replace, native semantics"
+  },
+  "keyPrinciples": [
+    {
+      "title": "Perceivable",
+      "description": "Users must be able to perceive the information",
+      "requirements": [
+        "Text alternatives for images",
+        "Captions for audio/video",
+        "Content distinguishable without color alone",
+        "Sufficient color contrast"
+      ]
+    },
+    {
+      "title": "Operable",
+      "description": "Users must be able to operate the interface",
+      "requirements": [
+        "All functionality keyboard accessible",
+        "No keyboard traps",
+        "Enough time to read/interact",
+        "No seizure-inducing content"
+      ]
+    },
+    {
+      "title": "Understandable",
+      "description": "Users must be able to understand the information",
+      "requirements": [
+        "Readable and understandable text",
+        "Predictable navigation",
+        "Input assistance and error prevention"
+      ]
+    },
+    {
+      "title": "Robust",
+      "description": "Content must be interpretable by assistive technologies",
+      "requirements": [
+        "Valid HTML",
+        "Name, role, value for custom controls",
+        "Compatible with assistive technologies"
+      ]
+    }
+  ],
+  "commonIssues": [
+    {
+      "issue": "Missing form labels",
+      "problem": "Screen readers can't announce field purpose",
+      "fix": "Always associate labels with form controls using 'for' attribute"
+    },
+    {
+      "issue": "Missing alt text",
+      "problem": "Images are meaningless to screen readers",
+      "fix": "Add descriptive alt text, or alt='' for decorative images"
+    },
+    {
+      "issue": "Color-only indicators",
+      "problem": "Can't be perceived without vision",
+      "fix": "Add icons, text, or patterns alongside color"
+    },
+    {
+      "issue": "Poor keyboard navigation",
+      "problem": "Users can't access functionality without mouse",
+      "fix": "Ensure all interactive elements are focusable and have visible focus states"
+    },
+    {
+      "issue": "Missing focus indicators",
+      "problem": "Users can't see where they are on the page",
+      "fix": "Never remove outline without providing alternative focus style"
+    },
+    {
+      "issue": "Modals without focus management",
+      "problem": "Focus can get trapped or lost",
+      "fix": "Trap focus in modal, return focus on close, don't allow tabbing outside"
+    },
+    {
+      "issue": "Dynamic content without announcement",
+      "problem": "Screen readers miss updated content",
+      "fix": "Use aria-live regions for dynamic updates"
+    }
+  ],
+  "checklist": {
+    "forms": [
+      "All inputs have visible labels",
+      "Required fields marked visually and with aria-required",
+      "Error messages associated with fields",
+      "Group related fields with fieldset/legend",
+      "Tab order matches visual order"
+    ],
+    "navigation": [
+      "Skip link to main content",
+      "All links have descriptive text",
+      "Current page indicated in navigation",
+      "Breadcrumbs for hierarchical pages",
+      "Search accessible (label, type)"
+    ],
+    "tables": [
+      "Use th for header cells",
+      "Include scope attribute",
+      "Provide caption or summary",
+      "Proper table markup, not divs"
+    ],
+    "modals": [
+      "Focus trapped within modal",
+      "Focus returns to trigger on close",
+      "Escape key closes modal",
+      "Background content has aria-hidden",
+      "Modal has accessible name (title or aria-label)"
+    ],
+    "images": [
+      "Informative images have alt text",
+      "Decorative images have alt=''",
+      "Complex images have long descriptions",
+      "Icons with meaning have accessible names"
+    ],
+    "color": [
+      "4.5:1 contrast for normal text",
+      "3:1 contrast for large text",
+      "3:1 contrast for UI components",
+      "Color not sole indicator of meaning"
+    ]
+  },
+  "testing": [
+    "Use axe or similar automated testing",
+    "Test with keyboard alone (Tab, Shift+Tab, Enter, Space, Arrows, Escape)",
+    "Test with screen reader (NVDA, VoiceOver, JAWS)",
+    "Test with browser zoom at 200%",
+    "Test color contrast with tools (WebAIM, Colour Contrast Analyser)"
+  ],
+  "resources": [
+    "WebAIM: https://webaim.org/",
+    "WCAG Guidelines: https://www.w3.org/WAI/WCAG21/quickref/",
+    "A11y Project: https://www.a11yproject.com/",
+    "axe DevTools: https://www.deque.com/axe/devtools/"
+  ]
+}

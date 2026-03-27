@@ -1,0 +1,16 @@
+{
+  "skill": {
+    "name": "infineon-design-uiux",
+    "description": "UI/UX Design guidance for building professional enterprise applications with the Infineon Design System. Use this skill when designing interfaces, choosing components, or creating layouts for enterprise applications.",
+    "version": null
+  },
+  "paths": {
+    "root": null,
+    "packageJson": "packages/components/package.json"
+  },
+  "output": {
+    "dir": ".github/skills/infineon-design-uiux",
+    "localDir": "scripts/copilot-skill-generator/output-uiux",
+    "referencesDir": "references"
+  }
+}

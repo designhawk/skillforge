@@ -1,0 +1,59 @@
+# {{displayName}}
+
+{{#if description}}
+{{{description}}}
+{{else}}
+The `ifx-{{name}}` web component.
+{{/if}}
+
+{{#if usageContent}}
+{{{usageContent}}}
+{{/if}}
+
+---
+
+{{#if props.length}}
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+{{#each props}}
+| `{{name}}` | `{{{type}}}` | - | {{description}} |
+{{/each}}
+{{/if}}
+
+{{#if events.length}}
+---
+
+## Events
+
+| Event | Detail Type | Description |
+|-------|-------------|-------------|
+{{#each events}}
+| `{{name}}` | `{{{detail}}}` | {{description}} |
+{{/each}}
+{{/if}}
+
+{{#if cssProperties.length}}
+---
+
+## CSS Custom Properties
+
+| CSS Property | Default |
+|--------------|---------|
+{{#each cssProperties}}
+| `{{cssVar}}` | `{{default}}` |
+{{/each}}
+{{/if}}
+
+{{#if cssParts.length}}
+---
+
+## Shadow DOM Parts
+
+| Part Name | Description |
+|-----------|-------------|
+{{#each cssParts}}
+| `{{name}}` | {{description}} |
+{{/each}}
+{{/if}}

@@ -1,0 +1,91 @@
+{
+  "shadowDom": {
+    "title": "Shadow DOM",
+    "description": "Styling encapsulated components",
+    "overview": "Shadow DOM provides encapsulated DOM and styling for web components. Styles defined inside a component don't leak out, and external styles can't penetrate in.",
+    "implications": [
+      "Global CSS selectors (like descendant selectors) can't pierce Shadow DOM boundaries",
+      "CSS custom properties (variables) CAN pierce Shadow DOM - use these for theming",
+      "Parts and slots enable controlled external styling exposure"
+    ],
+    "themingApproach": "CSS custom properties are the recommended theming approach as they pierce the Shadow DOM boundary.",
+    "cssVars": [
+      { "component": "ifx-button", "variable": "--button-bg", "default": "var(--color-primary-500)" },
+      { "component": "ifx-button", "variable": "--button-color", "default": "var(--color-white)" }
+    ]
+  },
+  "ssr": {
+    "title": "Server-Side Rendering (SSR)",
+    "description": "Server-side rendering with Next.js, Nuxt, Angular Universal",
+    "frameworks": {
+      "nextjs": {
+        "name": "Next.js",
+        "approach": "Use dynamic import with ssr: false for components that don't need SSR"
+      },
+      "nuxt": {
+        "name": "Nuxt.js", 
+        "approach": "Use ClientOnly component or wrap in <ClientOnly>"
+      },
+      "angular": {
+        "name": "Angular Universal",
+        "approach": "Use @angular/ssr with TransferState for hydration"
+      }
+    },
+    "commonPattern": "Import web components dynamically on the client side to avoid SSR issues.",
+    "example": "Use dynamic imports or framework-specific lazy loading mechanisms."
+  },
+  "forms": {
+    "title": "Form Integration",
+    "description": "Form integration patterns",
+    "approaches": [
+      {
+        "name": "Native Form Association",
+        "description": "Associate custom elements with native forms using the 'form' attribute"
+      },
+      {
+        "name": "Form Data Events",
+        "description": "Listen to form events and manually sync data"
+      },
+      {
+        "name": "Framework Bindings",
+        "description": "Use React/Vue/Angular form libraries with custom inputs"
+      }
+    ],
+    "validation": [
+      "Use native HTML5 validation attributes where possible",
+      "Implement custom validation logic in framework wrapper components",
+      "Handle validation display in framework-specific ways"
+    ]
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "description": "a11y best practices",
+    "principles": [
+      {
+        "name": "Semantic HTML",
+        "description": "Use semantic elements appropriately"
+      },
+      {
+        "name": "Keyboard Navigation",
+        "description": "Ensure all interactive elements are keyboard accessible"
+      },
+      {
+        "name": "ARIA Labels",
+        "description": "Use ARIA attributes when native semantics aren't sufficient"
+      },
+      {
+        "name": "Color Contrast",
+        "description": "Maintain WCAG 2.1 AA contrast ratios"
+      },
+      {
+        "name": "Focus Management",
+        "description": "Manage focus appropriately for modals, dialogs, and dynamic content"
+      }
+    ],
+    "testing": [
+      "Use axe-core for automated testing",
+      "Test with screen readers (NVDA, VoiceOver, JAWS)",
+      "Verify keyboard navigation flow"
+    ]
+  }
+}

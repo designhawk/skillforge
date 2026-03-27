@@ -1,0 +1,141 @@
+{
+  "title": "Enterprise Responsive Design",
+  "description": "Responsive design patterns for enterprise applications",
+  "breakpoints": {
+    "xs": { "size": "360px", "description": "Small phones" },
+    "s": { "size": "576px", "description": "Large phones, small tablets" },
+    "m": { "size": "768px", "description": "Tablets" },
+    "l": { "size": "992px", "description": "Small laptops" },
+    "xl": { "size": "1200px", "description": "Desktops" },
+    "2xl": { "size": "1400px", "description": "Large desktops" }
+  },
+  "principles": [
+    {
+      "title": "Mobile-First Not Mobile-Only",
+      "description": "Enterprise apps are primarily desktop but must work on tablet/mobile",
+      "approach": [
+        "Design for desktop first (most common use case)",
+        "Ensure core tasks work on tablet",
+        "Mobile is for viewing/reviewing, not heavy data entry",
+        "Consider tablet for field workers"
+      ]
+    },
+    {
+      "title": "Content Priority",
+      "description": "What to show/hide at different breakpoints",
+      "patterns": {
+        "desktop": "Full navigation, all columns, side panels",
+        "tablet": "Collapsible sidebar, reduced columns, slide-out panels",
+        "mobile": "Hamburger nav, single column, bottom sheets"
+      }
+    },
+    {
+      "title": "Touch vs Click",
+      "description": "Interaction differences across devices",
+      "guidance": [
+        "Increase touch targets to 44x44px minimum on mobile",
+        "Add hover states for desktop, remove for touch",
+        "Consider swipe gestures for common actions on tablet",
+        "Bottom sheet modals on mobile vs center modals on desktop"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "name": "Responsive Table",
+      "description": "How tables adapt to smaller screens",
+      "approaches": [
+        {
+          "name": "Column Priority",
+          "description": "Hide least important columns first",
+          "implementation": "Show essential columns, 'View more' expands full table"
+        },
+        {
+          "name": "Horizontal Scroll",
+          "description": "Allow side-scrolling within table",
+          "implementation": "Freeze first column, horizontal scroll for rest"
+        },
+        {
+          "name": "Card View",
+          "description": "Transform rows to cards on mobile",
+          "implementation": "Each row becomes a card with key-value pairs"
+        },
+        {
+          "name": "Pagination Reduction",
+          "description": "Fewer items per page on mobile",
+          "implementation": "10 items desktop, 5 items mobile"
+        }
+      ]
+    },
+    {
+      "name": "Responsive Navigation",
+      "description": "Navigation adaptation strategies",
+      "approaches": [
+        {
+          "name": "Collapsible Sidebar",
+          "description": "Sidebar becomes hamburger menu",
+          "breakpoints": "Hide at s and below"
+        },
+        {
+          "name": "Bottom Navigation",
+          "description": "Primary actions at bottom on mobile",
+          "useFor": "4-5 main navigation items"
+        },
+        {
+          "name": "Crumbs + Actions",
+          "description": "Breadcrumbs at top, key actions floating",
+          "useFor": "Detail pages"
+        }
+      ]
+    },
+    {
+      "name": "Responsive Forms",
+      "description": "Form layout adaptation",
+      "approaches": [
+        {
+          "name": "Stack Fields",
+          "description": "All fields stack in single column",
+          "breakpoint": "Below m"
+        },
+        {
+          "name": "Full-Width Inputs",
+          "description": "Inputs take full width on mobile",
+          "implementation": "No side-by-side fields on mobile"
+        },
+        {
+          "name": "Floating Labels",
+          "description": "Labels inside inputs to save space",
+          "consideration": "May reduce accessibility"
+        }
+      ]
+    },
+    {
+      "name": "Responsive Charts",
+      "description": "Chart adaptation strategies",
+      "approaches": [
+        {
+          "name": "Simplify",
+          "description": "Show essential data points on mobile",
+          "implementation": "Reduce data density, show trends not details"
+        },
+        {
+          "name": "Vertical Stack",
+          "description": "Stack multiple charts vertically",
+          "implementation": "Each chart takes full width"
+        },
+        {
+          "name": "Tap for Details",
+          "description": "Show data on tap instead of hover",
+          "implementation": "Add tap interaction for tooltips"
+        }
+      ]
+    }
+  ],
+  "testing": [
+    "Test on actual devices when possible",
+    "Use browser DevTools responsive mode for quick checks",
+    "Test common enterprise devices (iPad, Surface, common Android tablets)",
+    "Consider touch vs mouse interaction differences",
+    "Test with slow network emulation"
+  ]
+}

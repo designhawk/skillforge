@@ -1,0 +1,44 @@
+{
+  "title": "Infineon Design System Overview",
+  "webComponentsDescription": "Web Components are native browser standards that enable creation of reusable, encapsulated UI elements:",
+  "technologies": [
+    { "name": "Custom Elements", "description": "Define new HTML tags (e.g., `<ifx-button>`) with custom behavior" },
+    { "name": "Shadow DOM", "description": "Encapsulated DOM subtree and styling, isolated from document DOM" },
+    { "name": "HTML Templates", "description": "`<template>` and `<slot>` for reusable markup fragments" }
+  ],
+  "benefits": [
+    { "title": "Framework Agnostic", "description": "Works in React, Vue, Angular, Svelte, or vanilla HTML" },
+    { "title": "Future Proof", "description": "Built on browser standards, not tied to any framework" },
+    { "title": "Performant", "description": "Lazy loading, tree-shaking, minimal bundle size" },
+    { "title": "Accessible", "description": "WCAG compliant out of the box" },
+    { "title": "Themable", "description": "CSS custom properties for easy customization" },
+    { "title": "Encapsulated", "description": "Styles don't leak in or out (Shadow DOM)" }
+  ],
+  "browserSupport": [
+    "Chrome/Edge 90+",
+    "Firefox 78+",
+    "Safari 14+"
+  ],
+  "packages": [
+    { "name": "@infineon/infineon-design-system-stencil", "purpose": "Core web components", "framework": "Any" },
+    { "name": "@infineon/infineon-design-system-react", "purpose": "React component wrappers", "framework": "React" },
+    { "name": "@infineon/infineon-design-system-angular", "purpose": "Angular module/standalone", "framework": "Angular" },
+    { "name": "@infineon/infineon-design-system-vue", "purpose": "Vue component wrappers", "framework": "Vue" },
+    { "name": "@infineon/design-system-tokens", "purpose": "SCSS design tokens", "framework": "Any" },
+    { "name": "@infineon/infineon-icons", "purpose": "SVG icon library", "framework": "Any" },
+    { "name": "@infineon/infineon-design-system-tailwind-config", "purpose": "Tailwind CSS integration", "framework": "Any" }
+  ],
+  "eventNaming": [
+    { "event": "ifxClick", "when": "User clicks the element" },
+    { "event": "ifxChange", "when": "Value changes" },
+    { "event": "ifxFocus", "when": "Element receives focus" },
+    { "event": "ifxBlur", "when": "Element loses focus" },
+    { "event": "ifxInput", "when": "User provides input" },
+    { "event": "ifxSubmit", "when": "Form is submitted" }
+  ],
+  "componentNaming": [
+    { "type": "Button", "tag": "<ifx-button>", "react": "<IfxButton>", "import": "React wrapper" },
+    { "type": "Input", "tag": "<ifx-input>", "react": "<IfxInput>", "import": "React wrapper" }
+  ],
+  "frameworks": ["Vanilla HTML", "React", "Angular", "Vue"]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Enterprise UI/UX Design Principles",
+  "subtitle": "Design guidance for building professional enterprise applications",
+  "principles": [
+    {
+      "title": "Clarity Over Creativity",
+      "description": "Enterprise apps prioritize clarity and efficiency. Users need to accomplish tasks quickly, not be impressed by clever design.",
+      "guidance": [
+        "Use familiar patterns over novel ones",
+        "Labels should be descriptive, not witty",
+        "Icons should be unambiguous - when in doubt, add text labels"
+      ]
+    },
+    {
+      "title": "Density and Space",
+      "description": "Enterprise users often work with data-dense interfaces. Balance information density with visual breathing room.",
+      "guidance": [
+        "Data tables can be dense - prioritize scannability",
+        "Use whitespace strategically to create visual groupings",
+        "Forms can be compact but must maintain readability",
+        "Avoid excessive padding that pushes content below the fold"
+      ]
+    },
+    {
+      "title": "Consistent and Predictable",
+      "description": "Users develop muscle memory. Consistent interfaces reduce cognitive load and errors.",
+      "guidance": [
+        "Place similar actions in the same location",
+        "Use consistent naming across the application",
+        "Follow platform conventions for interaction patterns",
+        "Error messages should appear in predictable locations"
+      ]
+    },
+    {
+      "title": "Progressive Disclosure",
+      "description": "Show users what they need, when they need it. Don't overwhelm with options upfront.",
+      "guidance": [
+        "Start with defaults that work for most users",
+        "Use accordions or tabs for advanced options",
+        "Contextual help over comprehensive documentation",
+        " Wizards for infrequent, complex tasks"
+      ]
+    }
+  ]
+}

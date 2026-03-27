@@ -1,0 +1,134 @@
+---
+name: {{skillName}}
+description: '{{skillDescription}}'
+metadata:
+  version: '{{version}}'
+---
+
+# {{skillName}} Skill
+
+## Overview
+
+This skill provides guidance for using the Infineon Design System, a collection of {{totalComponents}}+ production-ready web components built with Stencil.
+
+## Supported Frameworks
+
+- **Vanilla HTML/JS** - Direct custom elements
+- **React** - \`@infineon/infineon-design-system-react\`
+- **Angular** - \`@infineon/infineon-design-system-angular\`
+- **Vue** - \`@infineon/infineon-design-system-vue\`
+
+## Available Components
+
+{{#each componentNames}}
+- \`{{this}}\`
+{{/each}}
+
+## Foundations ({{totalFoundations}} areas)
+
+Design foundations provide the visual and conceptual basis for all components.
+
+{{#each foundations}}
+- [{{this.title}}](./references/foundations/{{this.name}}.md) - {{this.tokens.length}} tokens
+{{/each}}
+
+### Storybook Foundations
+
+For full visual documentation with live examples, see the [Storybook Foundations](https://infineon.github.io/infineon-design-system-stencil/?path=/story/foundations-border-radius--page):
+
+{{#each foundations}}
+- [{{this.title}}](https://infineon.github.io/infineon-design-system-stencil/?path=/story/foundations-{{this.name}}--page)
+{{/each}}
+
+## Quick Start
+
+### Vanilla HTML
+\`\`\`html
+<script type="module" src="https://cdn.jsdelivr.net/npm/@infineon/infineon-design-system-stencil"></script>
+<ifx-button variant="primary">Click Me</ifx-button>
+\`\`\`
+
+### React
+\`\`\`tsx
+import { IfxButton } from '@infineon/infineon-design-system-react';
+<IfxButton variant="primary">Click Me</IfxButton>
+\`\`\`
+
+### Angular
+\`\`\`html
+<ifx-button variant="primary">Click Me</ifx-button>
+\`\`\`
+
+### Vue
+\`\`\`vue
+<ifx-button variant="primary">Click Me</ifx-button>
+\`\`\`
+
+## Key Principles
+
+1. **Web Components First** - All components are standard Custom Elements
+2. **Framework Wrappers** - Thin wrappers provide native DX for each framework
+3. **Shadow DOM** - Styles are encapsulated; use CSS custom properties for theming
+4. **Events** - All events use `ifx` prefix (e.g., `ifxClick`, `ifxChange`)
+
+## Foundations
+
+Design tokens and visual foundations that power the design system.
+
+### Design Tokens ({{totalColorTokens}} Colors, {{totalTypographyTokens}} Typography)
+
+Design tokens are the visual design atoms - underlying values that make up the visual language.
+
+**Color Tokens:**
+{{#each colorTokens}}
+- \`{{this.scssVar}}\` → \`{{this.cssVar}}\` ({{this.value}})
+{{/each}}
+
+**Typography Tokens:**
+{{#each typographyTokens}}
+- \`{{this.scssVar}}\` → \`{{this.cssVar}}\` ({{this.value}})
+{{/each}}
+
+### Icons ({{totalIcons}} Icons)
+
+The icon library provides **{{totalIcons}} SVG icons** optimized for clarity and consistency.
+
+**Usage:**
+\`\`\`typescript
+import library from '@infineon/infineon-icons/library';
+import { cCheck16, cArrowRight24 } from '@infineon/infineon-icons';
+library.add(cCheck16, cArrowRight24);
+\`\`\`
+
+**All Available Icons:**
+{{#each iconNames}}
+- \`{{this}}\`
+{{/each}}
+
+## Event Naming
+
+| Framework | Event Handler |
+|-----------|---------------|
+| Vanilla | \`addEventListener('ifxClick')\` |
+| React | \`onIfxClick\` |
+| Angular | \`(ifxClick)\` |
+| Vue | \`@ifxClick\` |
+
+## Theming
+
+Use CSS custom properties to customize component appearance:
+\`\`\`css
+ifx-button {
+  --button-bg: #000000;
+  --button-color: #ffffff;
+}
+\`\`\`
+
+## Component Documentation
+
+See \`guides/\` directory for detailed installation and usage guides.
+
+## Additional Resources
+
+- [Storybook](https://infineon.github.io/infineon-design-system-stencil/)
+- [USAGE.md](https://github.com/Infineon/infineon-design-system-stencil/blob/master/USAGE.md)

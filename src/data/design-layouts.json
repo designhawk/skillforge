@@ -1,0 +1,106 @@
+{
+  "title": "Enterprise Layout Patterns",
+  "description": "Common layout structures for enterprise applications",
+  "patterns": [
+    {
+      "name": "Dashboard Layout",
+      "useWhen": "Overview screens with KPIs, charts, and summary data",
+      "structure": {
+        "header": "App title, user menu, notifications",
+        "sidebar": "Navigation (collapsible on mobile)",
+        "main": "Grid of cards with metrics/charts",
+        "footer": "Optional: secondary navigation or help"
+      },
+      "characteristics": [
+        "Visual hierarchy through card sizing",
+        "At-a-glance metrics in top row",
+        "Charts/graphs for trends",
+        "Recent activity or alerts in secondary position"
+      ],
+      "infineonComponents": ["card", "icon-button", "progress-bar", "spinner", "table-basic-version"]
+    },
+    {
+      "name": "List-Detail Layout",
+      "useWhen": "Viewing and managing a collection of items",
+      "structure": {
+        "header": "Page title, breadcrumbs, primary actions",
+        "filters": "Search, filters, view toggles",
+        "list": "Scrollable list/table with selection",
+        "detail": "Detail panel or modal on selection"
+      },
+      "characteristics": [
+        "Master list on left, detail panel on right (desktop)",
+        "Full-page navigation on mobile",
+        "Inline editing for quick updates",
+        "Bulk selection for batch operations"
+      ],
+      "infineonComponents": ["table-advanced-version", "search-field", "dropdown", "checkbox", "modal"]
+    },
+    {
+      "name": "Form Layout",
+      "useWhen": "Data entry or configuration screens",
+      "structure": {
+        "header": "Form title, cancel/save actions",
+        "sections": "Grouped fields with section headers",
+        "footer": "Form actions, validation summary"
+      },
+      "characteristics": [
+        "Single column for complex forms",
+        "Two columns for simple label-value pairs",
+        "Required fields clearly marked",
+        "Inline validation with clear error messages"
+      ],
+      "infineonComponents": ["text-field", "textarea", "select", "checkbox", "date-picker", "file-upload"]
+    },
+    {
+      "name": "Wizard/Stepper Layout",
+      "useWhen": "Multi-step processes like onboarding or setup",
+      "structure": {
+        "header": "Process title, step indicator",
+        "sidebar": "Step navigation (optional)",
+        "main": "Current step content",
+        "footer": "Back, Next, Cancel actions"
+      },
+      "characteristics": [
+        "Clear progress indication",
+        "Users can navigate back without losing data",
+        "Summary step before final submission",
+        "Save draft capability for long processes"
+      ],
+      "infineonComponents": ["stepper", "button", "text-field", "modal"]
+    },
+    {
+      "name": "Navigation Hierarchy",
+      "useWhen": "Deep application with many sections",
+      "structure": {
+        "sidebar": "Collapsible navigation tree",
+        "header": "Section title, breadcrumb, local actions",
+        "main": "Section content"
+      },
+      "characteristics": [
+        "Nested navigation for related sections",
+        "Current location clearly indicated",
+        "Quick access to recently visited",
+        "Search accessible from any view"
+      ],
+      "infineonComponents": ["navigation", "breadcrumb", "tabs", "link"]
+    },
+    {
+      "name": "Grid Dashboard",
+      "useWhen": "Analytics or data visualization screens",
+      "structure": {
+        "header": "Date range selector, export options",
+        "filters": "Dimension filters, segment selectors",
+        "grid": "Configurable chart/table grid",
+        "detail": "Drill-down panel on item click"
+      },
+      "characteristics": [
+        "Resizable and reorderable widgets",
+        "Consistent time period across charts",
+        "Export to CSV/Excel",
+        "Responsive chart sizing"
+      ],
+      "infineonComponents": ["card", "dropdown", "select", "table-advanced-version"]
+    }
+  ]
+}

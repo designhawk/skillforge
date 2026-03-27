@@ -1,0 +1,257 @@
+{
+  "title": "Component Selection Guide",
+  "description": "When to use which component - guidance for enterprise applications",
+  "guidance": [
+    {
+      "category": "Navigation",
+      "components": [
+        {
+          "name": "Navigation (Sidebar)",
+          "useFor": "Primary app navigation, main sections",
+          "avoidFor": "Secondary actions, breadcrumbs",
+          "tips": [
+            "Keep to 5-7 top-level items",
+            "Group related items under headers",
+            "Indicate current location clearly",
+            "Support collapsible state on mobile"
+          ]
+        },
+        {
+          "name": "Tabs",
+          "useFor": "Switching between related views at same level",
+          "avoidFor": "Primary navigation, more than 7 items",
+          "tips": [
+            "Use for filtering/viewing same dataset differently",
+            "Keep tab labels short and clear",
+            "Don't use tabs for sequential steps (use stepper instead)",
+            "Consider if accordion is better for fewer options"
+          ]
+        },
+        {
+          "name": "Breadcrumb",
+          "useFor": "Showing location in hierarchical structure",
+          "avoidFor": "Flat structures, dashboards",
+          "tips": [
+            "All items should be clickable except current",
+            "Use for 2+ levels of hierarchy",
+            "Truncate middle items on long paths if needed",
+            "Include root/home in long breadcrumbs"
+          ]
+        },
+        {
+          "name": "Pagination",
+          "useFor": "Navigating large datasets",
+          "avoidFor": "Small datasets, infinite content",
+          "tips": [
+            "Show total count when available",
+            "Provide page size selector (10, 25, 50)",
+            "Include 'jump to page' for large datasets",
+            "Consider 'load more' for some use cases"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Data Display",
+      "components": [
+        {
+          "name": "Table (Basic/Advanced)",
+          "useFor": "Tabular data, sortable lists, data management",
+          "avoidFor": "Visual cards, dashboards, mobile-friendly lists",
+          "tips": [
+            "Use advanced version for sorting, filtering, bulk actions",
+            "Keep columns minimal - only show necessary data",
+            "Enable column resizing but with sensible defaults",
+            "Consider horizontal scroll on mobile"
+          ]
+        },
+        {
+          "name": "Card",
+          "useFor": "Grouping related info, dashboard widgets, summaries",
+          "avoidFor": "Dense data tables, forms",
+          "tips": [
+            "Use for summary views and KPIs",
+            "Cards in a grid should be consistent height",
+            "Include clear hierarchy (title, metadata, actions)",
+            "Don't overcrowd cards with too much info"
+          ]
+        },
+        {
+          "name": "Progress Bar",
+          "useFor": "Showing task progress, upload status",
+          "avoidFor": "Percentage displays in dashboards (use metrics)",
+          "tips": [
+            "Always show percentage when applicable",
+            "Use determinate progress when possible",
+            "Indicate busy/indeterminate state clearly",
+            "Include cancel option for long operations"
+          ]
+        },
+        {
+          "name": "Spinner",
+          "useFor": "Loading states, waiting for operation",
+          "avoidFor": "Progress that users need to measure",
+          "tips": [
+            "Use for operations expected < 3 seconds",
+            "Provide context: 'Loading...' not just spinner",
+            "Consider skeleton screens for longer operations",
+            "Don't block entire page when only part is loading"
+          ]
+        },
+        {
+          "name": "Status Indicator",
+          "useFor": "Showing item state (active, pending, error)",
+          "avoidFor": "Progress percentage, complex state",
+          "tips": [
+            "Use consistent status colors across app",
+            "Include text label in addition to color",
+            "Consider tooltip for additional context",
+            "Status should be scannable in lists"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Forms & Input",
+      "components": [
+        {
+          "name": "Text Field",
+          "useFor": "Single-line text input, search",
+          "avoidFor": "Multi-line text, selections, dates",
+          "tips": [
+            "Always include labels (not placeholder as label)",
+            "Show validation errors inline",
+            "Use appropriate input type (email, tel, number)",
+            "Clear button for search fields"
+          ]
+        },
+        {
+          "name": "Textarea",
+          "useFor": "Multi-line text, long descriptions, notes",
+          "avoidFor": "Single-line input, formatted content",
+          "tips": [
+            "Show character count when limits exist",
+            "Auto-expand up to maximum height",
+            "Consider rich text editor for formatted content",
+            "Label should describe expected content"
+          ]
+        },
+        {
+          "name": "Select / Dropdown",
+          "useFor": "Selecting from 5+ options",
+          "avoidFor": "2-4 options (use radio buttons), binary choices (use toggle)",
+          "tips": [
+            "Use search/filter for long lists",
+            "Group options when applicable",
+            "Consider native select for simple cases",
+            "Show selected state clearly"
+          ]
+        },
+        {
+          "name": "Checkbox",
+          "useFor": "Multiple selections from a list, binary yes/no",
+          "avoidFor": "Single selection, mutually exclusive options",
+          "tips": [
+            "Group related checkboxes under a label",
+            "'Select all' for large lists with few selected",
+            "Inline validation for required checkboxes",
+            "Consider tri-state for 'indeterminate' parent"
+          ]
+        },
+        {
+          "name": "Radio Button",
+          "useFor": "Single selection from 2-7 options",
+          "avoidFor": "Multiple selections, more than 7 options",
+          "tips": [
+            "Always have a default selection when possible",
+            "Vertical layout for better readability",
+            "Use for mutually exclusive options",
+            "Consider dropdown for more than 5 options"
+          ]
+        },
+        {
+          "name": "Switch / Toggle",
+          "useFor": "Binary on/off settings, immediate apply",
+          "avoidFor": "Form submission required, undo concerns",
+          "tips": [
+            "Use for settings that take effect immediately",
+            "Label should state the current state, not action",
+            "Provide confirmation for destructive toggles",
+            "Consider 'pending' state for async operations"
+          ]
+        },
+        {
+          "name": "Date Picker",
+          "useFor": "Selecting dates and date ranges",
+          "avoidFor": "Entering known dates (type faster)",
+          "tips": [
+            "Support keyboard navigation",
+            "Show selected range visually",
+            "Presets like 'Today', 'Last 7 days' for ranges",
+            "Consider native input type='date' for simple cases"
+          ]
+        },
+        {
+          "name": "File Upload",
+          "useFor": "Uploading documents, images, attachments",
+          "avoidFor": "Simple text data entry",
+          "tips": [
+            "Show upload progress for large files",
+            "Support drag-and-drop",
+            "Display uploaded files with remove option",
+            "Indicate allowed file types and size limits"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Feedback & Overlays",
+      "components": [
+        {
+          "name": "Notification (Toast)",
+          "useFor": "Transient feedback, success confirmations",
+          "avoidFor": "Errors requiring action, important warnings",
+          "tips": [
+            "Auto-dismiss after 3-5 seconds",
+            "Include action button when relevant",
+            "Stack multiple notifications",
+            "Position consistently (top-right or bottom-right)"
+          ]
+        },
+        {
+          "name": "Modal",
+          "useFor": "Quick actions, confirmations, focused tasks",
+          "avoidFor": "Complex forms, sequential tasks, large data",
+          "tips": [
+            "Keep content brief - 1-3 screens max",
+            "Clear close button and escape key support",
+            "Focus trap within modal",
+            "Consider drawer for complex content"
+          ]
+        },
+        {
+          "name": "Alert",
+          "useFor": "Important information requiring attention",
+          "avoidFor": "Success messages, optional information",
+          "tips": [
+            "Use severity levels appropriately",
+            "Include clear action or dismiss option",
+            "Don't auto-dismiss critical alerts",
+            "Position near related content"
+          ]
+        },
+        {
+          "name": "Popover / Tooltip",
+          "useFor": "Additional context, help text, previews",
+          "avoidFor": "Critical information, interactive content",
+          "tips": [
+            "Don't put critical actions in tooltips",
+            "Support keyboard trigger (focus)",
+            "Position to avoid viewport edges",
+            "Dismiss on click outside or escape"
+          ]
+        }
+      ]
+    }
+  ]
+}

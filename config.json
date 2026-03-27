@@ -1,0 +1,29 @@
+{
+  "skill": {
+    "name": "infineon-design-system",
+    "description": "Infineon Design System for building UIs with web components. Use this when working with @infineon/infineon-design-system components (ifx-button, ifx-input, etc.) or any Infineon design system questions. Covers React, Vue, Angular, and vanilla HTML/JavaScript.",
+    "version": null
+  },
+  "paths": {
+    "root": null,
+    "usage": "USAGE.md",
+    "packageJson": "packages/components/package.json",
+    "packages": {
+      "components": "packages/components/src/components",
+      "tokens": "packages/components/node_modules/@infineon/design-system-tokens",
+      "icons": "packages/components/node_modules/@infineon/infineon-icons"
+    },
+    "foundations": "packages/components/src/storybook/stories/foundations"
+  },
+  "limits": {
+    "colorTokens": 20,
+    "typographyTokens": 10,
+    "icons": 50,
+    "components": null
+  },
+  "output": {
+    "dir": ".github/skills/infineon-design-system",
+    "localDir": "scripts/copilot-skill-generator/output",
+    "referencesDir": "references"
+  }
+}

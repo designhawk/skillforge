@@ -1,0 +1,22 @@
+{
+  "name": "copilot-skill-generator",
+  "version": "1.0.0",
+  "description": "Generator tool for creating GitHub Copilot skill for Infineon Design System",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node src/index.js",
+    "generate:design": "node src/index-design.js",
+    "generate:watch": "node --watch src/index.js",
+    "parse:usage": "node src/parsers/usageParser.js"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "gray-matter": "^4.0.3",
+    "handlebars": "^4.7.8",
+    "marked": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

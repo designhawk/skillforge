@@ -1,0 +1,113 @@
+{
+  "title": "Troubleshooting",
+  "description": "Common issues and solutions",
+  "sections": [
+    {
+      "title": "Installation Issues",
+      "items": [
+        {
+          "problem": "Components not rendering",
+          "solutions": [
+            "Ensure the script is loaded: `<script type='module' src='...'></script>`",
+            "Check browser console for loading errors",
+            "Verify custom elements v1 support in your browser"
+          ]
+        },
+        {
+          "problem": "Styles not applying",
+          "solutions": [
+            "Use CSS custom properties for theming (styles pierce Shadow DOM)",
+            "Check if you're using encapsulated selectors correctly",
+            "Verify CSS specificity"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Framework Integration",
+      "items": [
+        {
+          "problem": "React: Events not firing",
+          "solutions": [
+            "Use camelCase event handlers: `onIfxClick` not `onclick`",
+            "Ensure you're using the React wrapper components",
+            "Check that the wrapper is properly importing the core component"
+          ]
+        },
+        {
+          "problem": "Angular: Expression changed after checking",
+          "solutions": [
+            "Wrap component usage in `ngAfterViewInit`",
+            "Use `ChangeDetectionStrategy.OnPush`",
+            "Run outside Angular zone when appropriate"
+          ]
+        },
+        {
+          "problem": "Vue: Properties not updating",
+          "solutions": [
+            "Ensure v-model is properly configured",
+            "Check if the component emits the correct events for v-model"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SSR Issues",
+      "items": [
+        {
+          "problem": "Hydration mismatch",
+          "solutions": [
+            "Use client-only rendering for web components",
+            "Implement proper SSR guards",
+            "Consider using framework-specific lazy loading"
+          ]
+        },
+        {
+          "problem": "Flash of unstyled content",
+          "solutions": [
+            "Use loading states appropriately",
+            "Consider skeleton loaders during hydration"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Performance Issues",
+      "items": [
+        {
+          "problem": "Slow Initial Load",
+          "solutions": [
+            "Use lazy loading - the library supports tree-shaking and lazy loading of individual components"
+          ]
+        },
+        {
+          "problem": "FOUT (Flash of Unstyled Text)",
+          "solutions": [
+            "Use visibility hiding until component is defined"
+          ]
+        }
+      ]
+    }
+  ],
+  "gettingHelp": {
+    "beforeAsking": [
+      "Check Storybook for working examples",
+      "Check GitHub Issues",
+      "Search Stack Overflow"
+    ],
+    "openingIssue": {
+      "include": [
+        "Component and version",
+        "Framework and version",
+        "Minimal reproduction",
+        "Expected vs actual behavior",
+        "Browser and OS"
+      ],
+      "template": {
+        "component": "ifx-button@39.20.1",
+        "framework": "React 18.2",
+        "browser": "Chrome 120 / macOS"
+      }
+    }
+  }
+}

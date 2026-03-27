@@ -1,0 +1,142 @@
+{
+  "title": "Enterprise Typography",
+  "description": "Typography guidance for professional enterprise applications",
+  "fontFamily": {
+    "primary": "'Source Sans 3', Arial, sans-serif",
+    "monospace": "'Source Code Pro', Consolas, monospace",
+    "usage": "Source Sans 3 for all interface text"
+  },
+  "principles": [
+    {
+      "title": "Readability First",
+      "description": "Text must be comfortable for extended reading",
+      "rules": [
+        "Body text: 16px minimum, 14px absolute minimum",
+        "Line height: 1.5 for body text",
+        "Line length: 60-75 characters optimal",
+        "Avoid justified text (creates uneven spacing)"
+      ]
+    },
+    {
+      "title": "Visual Hierarchy",
+      "description": "Clear distinction between content levels",
+      "rules": [
+        "Use heading sizes consistently",
+        "Don't use heading styles for emphasis",
+        "Primary action text should be larger than secondary",
+        "Metadata should be visually subordinate"
+      ]
+    },
+    {
+      "title": "Consistent Sizing",
+      "description": "Use the type scale consistently",
+      "rules": [
+        "Pick 3-4 text sizes maximum",
+        "Don't go below 12px for any text",
+        "Use scale: 12, 14, 16, 20, 24, 32, 40",
+        "Match line-height to font-size appropriately"
+      ]
+    }
+  ],
+  "scale": [
+    {
+      "style": "Display",
+      "size": "4.25rem (68px)",
+      "weight": 600,
+      "useFor": "Hero text, marketing headers (rare in enterprise)",
+      "lineHeight": "4.75rem"
+    },
+    {
+      "style": "Heading 1",
+      "size": "3rem (48px)",
+      "weight": 600,
+      "useFor": "Page titles",
+      "lineHeight": "3.25rem"
+    },
+    {
+      "style": "Heading 2",
+      "size": "2.25rem (36px)",
+      "weight": 600,
+      "useFor": "Section headers",
+      "lineHeight": "3rem"
+    },
+    {
+      "style": "Heading 3",
+      "size": "1.75rem (28px)",
+      "weight": 600,
+      "useFor": "Card titles, subsection headers",
+      "lineHeight": "2.25rem"
+    },
+    {
+      "style": "Heading 4",
+      "size": "1.5rem (24px)",
+      "weight": 600,
+      "useFor": "Small section headers",
+      "lineHeight": "2rem"
+    },
+    {
+      "style": "Body Large",
+      "size": "1.125rem (18px)",
+      "weight": 400,
+      "useFor": "Lead text, important body copy",
+      "lineHeight": "1.625rem"
+    },
+    {
+      "style": "Body",
+      "size": "1rem (16px)",
+      "weight": 400,
+      "useFor": "Default body text",
+      "lineHeight": "1.5rem"
+    },
+    {
+      "style": "Body Small",
+      "size": "0.875rem (14px)",
+      "weight": 400,
+      "useFor": "Secondary text, table cells",
+      "lineHeight": "1.25rem"
+    },
+    {
+      "style": "Caption",
+      "size": "0.75rem (12px)",
+      "weight": 400,
+      "useFor": "Captions, timestamps, metadata",
+      "lineHeight": "1rem"
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Using heading styles for emphasis",
+      "problem": "Breaks semantic hierarchy, confuses screen readers",
+      "solution": "Use weight or color for emphasis, not heading styles"
+    },
+    {
+      "mistake": "Too many font sizes",
+      "problem": "Inconsistent, cluttered appearance",
+      "solution": "Limit to 3-4 sizes: title, section, body, caption"
+    },
+    {
+      "mistake": "Lines too long",
+      "problem": "Difficult to read, eye fatigue",
+      "solution": "Max 75 characters, use max-width for content areas"
+    },
+    {
+      "mistake": "Insufficient contrast",
+      "problem": "Hard to read, accessibility issues",
+      "solution": "Use engineering-600+ for body text, not engineering-400"
+    },
+    {
+      "mistake": "ALL CAPS for emphasis",
+      "problem": "Hard to read, looks like shouting",
+      "solution": "Use sentence case, bold for emphasis"
+    }
+  ],
+  "bestPractices": [
+    "Use sentence case for buttons and navigation",
+    "Labels should be noun Phrase, not verb phrases",
+    "Table headers should be brief and scannable",
+    "Error messages should be human-readable sentences",
+    "Placeholder text is not a substitute for labels",
+    "Use active voice: 'Save changes' not 'Changes saved'",
+    "Be concise: 3 words better than 10 when possible"
+  ]
+}
